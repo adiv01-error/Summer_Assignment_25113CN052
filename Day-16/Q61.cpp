@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter array number: ";
+    cin>>n;
+
+    int arr[n-1];
+
+    cout<<"Enter array elements: ";
+    for(int i=0; i<n-1;i++)
+    {
+        cin>>arr[i];
+    }
+
+    int totalSum = n*(n+1)/2;
+    int arraySum = 0;
+
+    for(int i=0; i<n-1;i++){
+        arraySum+=arr[i];
+    }
+    int missingNumber = totalSum - arraySum;
+    cout<<"Missing num: "<<missingNumber<<endl;
+
+    return 0;
+
+}
